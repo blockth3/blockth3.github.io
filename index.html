@@ -51,15 +51,16 @@
 
         <div class="fixed w-full bg-black bg-opacity-50 shadow-xs top-0 z-10">
 
-            <div class="container mx-auto max-w-screen-xl px-6 flex flex-col lg:flex-row lg:items-center justify-between py-3">
+            <div
+                class="container mx-auto max-w-screen-xl px-6 flex flex-col lg:flex-row lg:items-center justify-between py-3">
 
                 <div class="flex flex-row items-center justify-between">
                     <div class="flex items-center gap-3">
                         <img src="./img/databases.png" alt="">
-                        <h1 class="text-white font-extrabold text-base">ThreeBlock</h1>
+                        <h1 class="text-white font-extrabold text-base">BlockThree</h1>
                     </div>
                     <div>
-                        <div class="flex flex-col gap-2 lg:hidden">
+                        <div class="flex flex-col gap-2 lg:hidden cursor-pointer" onclick="navToggle()">
                             <div class="w-[30px] rounded-lg h-[2px] bg-[#fe2a5c]">
                             </div>
                             <div class="w-[30px] rounded-lg h-[2px] bg-[#fe2a5c]">
@@ -67,11 +68,18 @@
                             <div class="w-[30px] rounded-lg h-[2px] bg-[#fe2a5c]">
                             </div>
                         </div>
+
+                        <!-- <div>
+                            <div class="w-[30px] text-[30px] font-bold h-[30px] text-[#fe2a5c]">
+                                X
+                            </div>
+                        </div> -->
+
                     </div>
                 </div>
-                
 
-                <div class="hidden lg:flex flex-col lg:flex-row items-center gap-5 lg:gap-10">
+
+                <div class="navMenu hidden py-5 lg:py-0 flex lg:flex flex-col lg:flex-row items-center gap-5 lg:gap-10">
 
                     <div class="flex items-center">
                         <h1 class="text-white font-extrabold text-sm">Explore</h1>
@@ -169,15 +177,16 @@
     </div>
 
 
-    <div class="bg-black bg-opactiy-10 relative pb-20">
+    <div class="bg-black bg-opactiy-10 relative pb-0 lg:pb-20">
 
         <div
             class="bg-white absolute shadow-full left-[300px] opacity-50 blur-2xl w-[350px] h-[350px] top-20 rounded-full hidden lg:flex">
         </div>
 
-        <div class="container mx-auto max-w-screen-xl px-10 flex py-10">
+        <div class="container mx-auto max-w-screen-xl px-10 flex lg:py-10">
             <div class="bg-opacity-50 flex items-center justify-center w-full">
-                <img src="./img/vote.png" alt="" class="relative -top-28 border border-[10px] border-gray-900 shadow-2xl rounded-2xl">
+                <img src="./img/vote.png" alt=""
+                    class="relative -top-28 border border-[10px] border-gray-900 shadow-2xl rounded-2xl">
             </div>
         </div>
     </div>
@@ -188,10 +197,11 @@
             class="bg-[#fe2a5c] bg-opacity-50 w-[150px] h-[550px] absolute -right-20 -top-[200px] rounded-full -rotate-45 hidden lg:flex">
         </div>
 
-        <div class="container mx-auto max-w-screen-xl px-10 flex relative py-10">
+        <div class="container mx-auto max-w-screen-xl px-10 flex relative py-0 lg:py-10">
 
             <div class="flex flex-col gap-8 lg:w-[50%]">
-                <h1 class="text-gray-200 text-2xl lg:text-4xl max-w-xl lg:leading-normal font-bold">Explore Web3 & Web2 Developement
+                <h1 class="text-gray-200 text-2xl lg:text-4xl max-w-xl lg:leading-normal font-bold">Explore Web3 & Web2
+                    Developement
                 </h1>
 
                 <!-- <p class="text-gray-200">Tech Stacks:</p> -->
@@ -224,9 +234,10 @@
                     <img src="./img/icon/python.png" class="w-[100px] h-[100px]" />
                 </div>
 
-                <div class="absolute left-10 top-4 p-10 rounded-full shadow-lg border border-gray-600 border-[5px] hidden lg:flex">
-                <img src="./img/icon/blockchain.png" class="w-[100px] h-[100px]" />
-            </div>
+                <div
+                    class="absolute left-10 top-4 p-10 rounded-full shadow-lg border border-gray-600 border-[5px] hidden lg:flex">
+                    <img src="./img/icon/blockchain.png" class="w-[100px] h-[100px]" />
+                </div>
 
 
 
@@ -241,7 +252,7 @@
             class="bg-[#fe2a5c] bg-opacity-50 w-[400px] h-[250px] absolute left-60 top-[200px] rounded-full blur-2xl hidden lg:flex">
         </div>
 
-        <div class="container mx-auto max-w-screen-xl px-10 flex flex-col gap-10 lg:gap-0 lg:flex-row relative py-20">
+        <div class="container mx-auto max-w-screen-xl px-10 flex flex-col gap-10 lg:gap-0 lg:flex-row relative py-10 lg:py-20">
 
             <div class="flex flex-col gap-8 lg:w-[50%]">
                 <h1 class="text-gray-200 text-4xl max-w-xl lg:leading-normal font-bold">Connect Today!
@@ -269,32 +280,37 @@
 
             <div class="relative lg:w-[50%]">
 
-                <form class="flex flex-col gap-2 px-5 py-10 border border-[#fe2a5c] rounded-lg bg-black bg-opacity-80 lg:w-[85%]">
+                <form
+                    class="flex flex-col gap-2 px-5 py-10 border border-[#fe2a5c] rounded-lg bg-black bg-opacity-80 lg:w-[85%]">
 
                     <div class="flex flex-col gap-3">
                         <p class=" text-white">Name of Yours</p>
-                        <input type="text" class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3">
+                        <input type="text"
+                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3">
                     </div>
 
                     <div class="flex flex-col gap-3">
                         <p class=" text-white">Email</p>
-                        <input type="text" class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3">
+                        <input type="text"
+                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3">
                     </div>
 
                     <div class="flex flex-col gap-3">
                         <p class=" text-white">You desire</p>
                         <!-- <input type="text" class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3"> -->
-                         <select name="" id="" class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3">
+                        <select name="" id=""
+                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3">
                             <option value="" disabled selected>Select</option>
                             <option value="">Blockchain (Web3)</option>
                             <option value="">Web2 - Without Trust</option>
-                         </select>
+                        </select>
                     </div>
 
 
                     <div class="pt-5">
                         <div>
-                            <button class="bg-[#fd356e] text-white px-2 py-2 rounded-lg text-sm font-semibold">Connect</button>
+                            <button
+                                class="bg-[#fd356e] text-white px-2 py-2 rounded-lg text-sm font-semibold">Connect</button>
                         </div>
                     </div>
 
@@ -314,20 +330,20 @@
             </div>
 
 
-            </div>
-
         </div>
+
+    </div>
     </div>
 
     <div class="bg-black bg-opactiy-50 relative">
 
-        <div class="container mx-auto max-w-screen-xl px-10 flex flex-col gap-4 relative pt-20 pb-10">
+        <div class="container mx-auto max-w-screen-xl px-10 flex flex-col gap-4 relative pt-10 lg:pt-20 pb-10">
 
             <div class="flex flex-col gap-8">
 
                 <div class="flex items-center gap-3">
                     <img src="./img/databases.png" alt="">
-                    <h1 class="text-white font-extrabold text-base">ThreeBlock</h1>
+                    <h1 class="text-white font-extrabold text-base">BlockThree</h1>
                 </div>
 
 
@@ -341,20 +357,31 @@
 
             <div class="relative flex flex-col items-center">
 
-                <p class="text-white text-sm">Copyright © 2024 ThreeBlock</p>
+                <p class="text-white text-sm">Copyright © 2024 BlockThree</p>
 
             </div>
 
-
-            </div>
 
         </div>
 
-
-
-
+    </div>
 
     </div>
+
+
+    <script>
+
+
+        function navToggle(){
+
+            let navMenu = document.querySelector(".navMenu");
+            navMenu.classList.toggle("hidden");
+
+        }
+
+
+
+    </script>
 
 
 </body>
