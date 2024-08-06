@@ -1,0 +1,332 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <style>
+        body {
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        /* * {
+           font-family: 'Poppins', sans-serif !important;
+       } */
+
+        * {
+            font-family: "Space Mono", monospace;
+        }
+
+        .bgset {
+            background: radial-gradient(ellipse at center, #e6007a 0%, #000 70%);
+            background-repeat: no-repeat;
+        }
+
+        #try3D {
+            transform: rotateY(200deg);
+        }
+    </style>
+
+
+
+    <div class="bgset h-screen overflow-hidden">
+
+        <div class="fixed w-full bg-black bg-opacity-50 shadow-xs top-0 z-10">
+
+            <div
+                class="container mx-auto max-w-screen-xl px-6 flex flex-col lg:flex-row lg:items-center justify-between py-3">
+
+                <div class="flex flex-row items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <img src="./img/databases.png" alt="">
+                        <h1 class="text-white font-extrabold text-base">Block3</h1>
+                    </div>
+                    <div>
+                        <div class="flex flex-col gap-2 lg:hidden cursor-pointer" onclick="navToggle()">
+                            <div class="w-[30px] rounded-lg h-[2px] bg-[#fe2a5c]">
+                            </div>
+                            <div class="w-[30px] rounded-lg h-[2px] bg-[#fe2a5c]">
+                            </div>
+                            <div class="w-[30px] rounded-lg h-[2px] bg-[#fe2a5c]">
+                            </div>
+                        </div>
+
+                        <!-- <div>
+                            <div class="w-[30px] text-[30px] font-bold h-[30px] text-[#fe2a5c]">
+                                X
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+
+
+                <div class="navMenu hidden py-5 lg:py-0 flex lg:flex flex-col lg:flex-row items-center gap-5 lg:gap-10">
+
+                    <div class="flex items-center">
+                        <h1 class="text-white font-extrabold text-sm">Explore</h1>
+                    </div>
+
+                    <div class="flex items-center">
+                        <h1 class="text-white font-extrabold text-sm">Info Us</h1>
+                    </div>
+
+                    <div class="flex items-center">
+                        <h1 class="text-white font-extrabold text-sm">Made Apps</h1>
+                    </div>
+
+                    <div>
+                        <button class="bg-[#fd356e] text-white px-2 py-2 rounded-lg text-sm font-semibold">Get in
+                            Touch</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="relative">
+
+
+            <div
+                class="bg-[#fe2a5c] shadow-lg blur-xl bg-opacity-50 w-[150px] h-[150px] absolute -top-20 left-[350px] 2xl:left-[600px] rounded-full hidden lg:flex">
+            </div>
+
+
+            <div class="bg-black bg-opacity-85 h-full bg-no-repeat">
+                <div
+                    class="container mx-auto max-w-screen-lg px-6 flex items-center flex-col gap-10 justify-center relative h-full">
+
+
+                    <div class="flex flex-col items-center gap-10">
+
+                        <div class="border border-[#fd356e] rounded-xl px-4 py-2">
+                            <p class="text-white text-xs">Code > Build > Deploy</p>
+                        </div>
+
+                        <div class="max-w-sm">
+                            <h1 class="text-center text-gray-200 font-bold text-4xl lg:leading-normal">Build Your Web3 &
+                                Web2 Apps</h1>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- <div class="bg-black bg-opactiy-10 relative pb-0 lg:pb-20">
+        <div
+            class="bg-white absolute shadow-full left-[100px] bottom-0 opacity-50 blur-2xl w-[150px] h-[350px] top-20 rounded-full hidden lg:flex">
+        </div>
+
+        <div class="container mx-auto max-w-screen-xl px-10 flex lg:py-10">
+            <div class="bg-opacity-50 flex items-center justify-center w-full">
+                <img src="./img/newapp.png" alt=""
+                    class="relative -top-28 border border-[#fd356e] backdrop-blur-sm shadow-2xl rounded-2xl shadow-xl">
+            </div>
+        </div>
+    </div> -->
+
+    <div class="bg-black bg-opactiy-50 relative">
+
+        <div
+            class="bg-[#fe2a5c] bg-opacity-50 w-[150px] h-[550px] absolute -right-20 -top-[200px] rounded-full -rotate-45 hidden lg:flex">
+        </div>
+
+        <div class="container mx-auto max-w-screen-xl px-10 flex relative py-0 lg:py-10">
+
+            <div class="flex flex-col gap-8 lg:w-[50%]">
+                <h1 class="text-gray-200 text-2xl lg:text-4xl max-w-xl lg:leading-normal font-bold">Explore Web3 & Web2
+                    Developement
+                </h1>
+
+                <!-- <p class="text-gray-200">Tech Stacks:</p> -->
+
+                <div class="flex flex-row items-center gap-4">
+                    <div class="border-[0.1px] border-gray-400 bg-gray-800 bg-opacity-20 shadow-lg p-2 rounded-lg">
+                        <img src="./img/icon/rust.png" class="w-[20px] h-[20px]" />
+                    </div>
+                    <div class="border-[0.1px] border-gray-400 bg-gray-800 bg-opacity-20 shadow-lg p-2 rounded-lg">
+                        <img src="./img/icon/python.png" class="w-[20px] h-[20px]" />
+                    </div>
+                </div>
+
+
+                <p class="text-white text-sm max-w-lg">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dignissimos enim nobis nisi, in temporibus unde iure tenetur minima perspiciatis similique eveniet,
+                    architecto voluptate ipsum veritatis consequuntur beatae accusantium nulla voluptates?</p>
+
+
+
+            </div>
+
+            <div class="relative lg:w-[50%]">
+
+                <!-- <p class="text-gray-200">Tech Stacks:</p> -->
+
+
+                <div class="absolute right-0 bottom-0 p-10 rounded-full shadow-lg border border-gray-600 border-[5px] hidden lg:flex"
+                    id="try3D">
+                    <img src="./img/icon/python.png" class="w-[100px] h-[100px]" />
+                </div>
+
+                <div
+                    class="absolute right-28 -top-10 p-10 rounded-full shadow-lg border border-gray-600 border-[5px] hidden lg:flex">
+                    <img src="./img/icon/rust.png" />
+                </div>
+
+                <div
+                    class="absolute left-10 top-4 p-10 rounded-full shadow-lg border border-gray-600 border-[5px] hidden lg:flex">
+                    <img src="./img/icon/blockchain.png" class="w-[100px] h-[100px]" />
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bg-black bg-opactiy-50 relative">
+
+        <div
+            class="bg-[#fe2a5c] bg-opacity-50 w-[400px] h-[250px] absolute left-60 2xl:left-[600px] top-[200px] rounded-full blur-2xl hidden lg:flex">
+        </div>
+
+        <div class="container mx-auto max-w-screen-xl px-10 flex flex-col gap-10 lg:gap-0 lg:flex-row relative py-10 lg:py-20">
+
+            <div class="flex flex-col gap-8 lg:w-[50%]">
+                <h1 class="text-gray-200 text-4xl max-w-xl lg:leading-normal font-bold">Connect Today!</h1>
+            </div>
+
+            <div class="relative lg:w-[50%]">
+
+                <form
+                    class="flex flex-col gap-2 px-5 py-10 border border-[#fe2a5c] rounded-lg bg-black bg-opacity-80 lg:w-[85%]">
+
+                    <div class="flex flex-col gap-3">
+                        <p class=" text-white">Name of Yours</p>
+                        <input type="text"
+                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3">
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <p class=" text-white">Email</p>
+                        <input type="text"
+                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3">
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <p class=" text-white">You desire</p>
+                        <!-- <input type="text" class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3"> -->
+                        <select name="" id=""
+                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3">
+                            <option value="" disabled selected>Select</option>
+                            <option value="">Blockchain (Web3)</option>
+                            <option value="">Web2 - Without Trust</option>
+                        </select>
+                    </div>
+
+
+                    <div class="pt-5">
+                        <div>
+                            <button
+                                class="bg-[#fd356e] text-white px-2 py-2 rounded-lg text-sm font-semibold">Connect</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <!-- <p class="text-gray-200">Tech Stacks:</p> -->
+                <!-- <div class="absolute right-0 bottom-0 p-10 rounded-full shadow-lg border border-gray-600 border-[5px]"
+                    id="try3D">
+                    <img src="./img/icon/python.png" class="w-[100px] h-[100px]" />
+                </div>
+
+                <div class="absolute left-10 top-4 p-10 rounded-full shadow-lg border border-gray-600 border-[5px]">
+                <img src="./img/icon/blockchain.png" class="w-[100px] h-[100px]" /> -->
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+
+    <div class="bg-black bg-opactiy-50 relative">
+
+        <div class="container mx-auto max-w-screen-xl px-10 flex flex-col gap-4 relative pt-10 lg:pt-20 pb-10">
+
+            <div class="flex flex-col gap-8">
+
+                <div class="flex items-center gap-3">
+                    <img src="./img/databases.png" alt="">
+                    <h1 class="text-white font-extrabold text-base">Block3</h1>
+                </div>
+
+
+                <!-- <h1 class="text-gray-200 text-4xl max-w-xl lg:leading-normal font-bold">Connect Today!
+                </h1> -->
+
+                <!-- <p class="text-gray-200">Tech Stacks:</p> -->
+
+
+            </div>
+
+            <div class="relative flex flex-col items-center">
+
+                <p class="text-white text-sm">Copyright © 2024 Block3</p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    </div>
+
+
+    <script>
+
+
+        function navToggle(){
+
+            let navMenu = document.querySelector(".navMenu");
+            navMenu.classList.toggle("hidden");
+
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
