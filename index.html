@@ -22,6 +22,10 @@
 <body>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+          }
+          
         body {
             overflow-x: hidden;
             overflow-y: scroll;
@@ -47,9 +51,9 @@
 
 
 
-    <div class="bgset h-screen overflow-hidden">
+    <div class="bgset h-screen overflow-hidden" id="base">
 
-        <div class="fixed w-full bg-black bg-opacity-50 shadow-xs top-0 z-10">
+        <div class="fixed w-full bg-black bg-opacity-50 shadow-xs top-0 z-10 header">
 
             <div
                 class="container mx-auto max-w-screen-xl px-6 flex flex-col lg:flex-row lg:items-center justify-between py-3">
@@ -79,21 +83,25 @@
                 </div>
 
 
-                <div class="navMenu hidden py-5 lg:py-0 flex lg:flex flex-col lg:flex-row items-center gap-5 lg:gap-10">
+                <div class="navMenu hidden lg:flex py-5 lg:py-0 flex lg:flex flex-col lg:flex-row items-center gap-5 lg:gap-10">
 
-                    <div class="flex items-center">
+                    <div class="flex items-center cursor-pointer" onclick="scrollToSection('base')">
+                        <h1 class="text-white font-extrabold text-sm">Base</h1>
+                    </div>
+
+                    <div class="flex items-center cursor-pointer" onclick="scrollToSection('explore')">
                         <h1 class="text-white font-extrabold text-sm">Explore</h1>
                     </div>
 
-                    <div class="flex items-center">
+                    <div class="flex items-center cursor-pointer" onclick="scrollToSection('info')">
                         <h1 class="text-white font-extrabold text-sm">Info Us</h1>
                     </div>
 
-                    <div class="flex items-center">
+                    <div class="flex items-center cursor-pointer" onclick="scrollToSection('made')">
                         <h1 class="text-white font-extrabold text-sm">Made Apps</h1>
                     </div>
 
-                    <div>
+                    <div onclick="scrollToSection('connect')">
                         <button class="bg-[#fd356e] text-white px-2 py-2 rounded-lg text-sm font-semibold">Get
                             Connect</button>
                     </div>
@@ -139,7 +147,7 @@
 
     
 
-    <div class="bg-black bg-opactiy-50 relative">
+    <div class="bg-black bg-opactiy-50 relative" id="explore">
 
         <div
             class="bg-[#fe2a5c] bg-opacity-50 w-[150px] h-[550px] absolute -right-20 -top-[200px] rounded-full -rotate-45 hidden lg:flex blur-sm">
@@ -199,7 +207,7 @@
         </div>
     </div>
 
-    <div class="bg-black bg-opactiy-10 relative pb-0 py-10 lg:pb-20">
+    <div class="bg-black bg-opactiy-10 relative pb-0 py-10 lg:pb-20" id="made">
 
         <div
             class="bg-white absolute shadow-full left-[100px] xl:left-[100px] bottom-[150px] opacity-50 blur-2xl w-[150px] h-[150px] top-20 rounded-full hidden lg:flex">
@@ -231,7 +239,7 @@
         </div>
     </div>
 
-    <div class="bg-black bg-opactiy-50 relative">
+    <div class="bg-black bg-opactiy-50 relative" id="connect">
 
         <div
             class="bg-[#fe2a5c] bg-opacity-50 w-[150px] h-[150px] absolute left-60 2xl:left-[600px] top-[200px] rounded-full blur-2xl hidden lg:flex">
@@ -248,24 +256,87 @@
                 <form
                     class="flex flex-col gap-2 px-5 py-10 border border-[#fe2a5c] rounded-lg bg-black bg-opacity-80 lg:w-[85%]">
 
-                    <h1 class="text-[#6E6D6D] font-bold text-xl pb-2">Get Connect</h1>
+                    <h1 class="text-[#6E6D6D] font-bold text-xl text-center pb-2">Get Connect</h1>
 
                     <div class="flex flex-col gap-3">
                         <p class=" text-white">Name of Yours</p>
                         <input type="text"
-                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3">
+                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3" required>
                     </div>
 
                     <div class="flex flex-col gap-3">
                         <p class=" text-white">Email</p>
                         <input type="text"
-                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3">
+                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3" required>
                     </div>
+
+                   
+
+                        <div class="flex flex-col gap-3 w-full">
+                            <p class=" text-white">Phone</p>
+                            <div class="flex flex-row gap-3 w-full">
+                                <select id="country-codes" class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3" name="country-codes">
+                                    <option value="+91" selected>+91</option>
+                                    <option value="+1">+1</option>
+                                    <option value="+44">+44</option>
+                                    <option value="+61">+61</option>
+                                    <option value="+49">+49</option>
+                                    <option value="+33">+33</option>
+                                    <option value="+81">+81</option>
+                                    <option value="+86">+86</option>
+                                    <option value="+7">+7</option>
+                                    <option value="+55">+55</option>
+                                    <option value="+27">+27</option>
+                                    <option value="+39">+39</option>
+                                    <option value="+34">+34</option>
+                                    <option value="+41">+41</option>
+                                    <option value="+46">+46</option>
+                                    <option value="+31">+31</option>
+                                    <option value="+47">+47</option>
+                                    <option value="+45">+45</option>
+                                    <option value="+353">+353</option>
+                                    <option value="+66">+66</option>
+                                    <option value="+63">+63</option>
+                                    <option value="+60">+60</option>
+                                    <option value="+65">+65</option>
+                                    <option value="+52">+52</option>
+                                    <option value="+54">+54</option>
+                                    <option value="+57">+57</option>
+                                    <option value="+64">+64</option>
+                                    <option value="+358">+358</option>
+                                    <option value="+32">+32</option>
+                                    <option value="+30">+30</option>
+                                    <option value="+48">+48</option>
+                                    <option value="+420">+420</option>
+                                    <option value="+372">+372</option>
+                                    <option value="+371">+371</option>
+                                    <option value="+370">+370</option>
+                                    <option value="+961">+961</option>
+                                    <option value="+20">+20</option>
+                                    <option value="+972">+972</option>
+                                    <option value="+965">+965</option>
+                                    <option value="+974">+974</option>
+                                    <option value="+971">+971</option>
+                                    <option value="+62">+62</option>
+                                    <option value="+58">+58</option>
+                                    <option value="+256">+256</option>
+                                    <option value="+251">+251</option>
+                                    <option value="+243">+243</option>
+                                    <option value="+234">+234</option>
+                                </select>
+
+                                <input type="number"
+                                class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3 w-full" required>
+
+                            </div>
+                         
+                        </div>
+                  
 
                     <div class="flex flex-col gap-3">
                         <p class=" text-white">Your desire</p>
                         <select name="" id=""
-                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3">
+                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3" required>
                             <option value="" disabled selected>Select</option>
                             <option value="">Web</option>
                             <option value="">Blockchain (Web3)</option>
@@ -303,7 +374,7 @@
     </div>
     </div>
 
-    <div class="bg-black bg-opactiy-50 relative">
+    <div class="bg-black bg-opactiy-50 relative" id="info">
 
         <div class="container mx-auto max-w-screen-xl px-10 flex flex-col gap-4 relative pt-10 lg:pt-20 pb-10">
 
@@ -347,6 +418,24 @@
 
         }
 
+
+        function scrollToSection(id){
+            let value = document.getElementById(id).offsetTop - 72;
+            window.scrollTo(0, value);
+            let navMenu = document.querySelector(".navMenu");
+            navMenu.classList.add("hidden");
+        }
+
+        window.addEventListener("scroll", function(){
+            let header = document.querySelector(".header");
+
+            if(window.scrollY > 72){
+                header.classList.add('bg-opacity-75');
+            }
+            else{
+                header.classList.remove('bg-opacity-75');
+            }
+        })
 
 
     </script>
