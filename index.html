@@ -131,7 +131,8 @@
                         </div>
 
                         <div class="max-w-lg">
-                            <h1 class="text-center text-gray-200 font-bold text-2xl leading-normal md:text-3xl lg:leading-normal"><span>Build Your Desire</span> Web & Web3, ML Apps</h1>
+                            <h1 class="text-center text-gray-200 font-bold text-2xl leading-normal md:text-3xl lg:text-4xl lg:leading-normal"><span>Build Your Desire</span> Web & Web3, ML Apps</h1>
+                         
                             <!-- <span class="text-[#ca2b58]">_</span> -->
                         </div>
 
@@ -174,9 +175,9 @@
 
 
                 <p class="text-white text-sm max-w-lg">
-                    Web for designs and programs websites for dynamic user experiences.
-                    WEB3 uses blockchain’s chain to build trust through decentralized, secure, and transparent systems.
-                    ML (Machine Learning) lets computers learn from data to make decisions or predictions without being explicitly programmed.
+                    <span class="font-bold text-[#fe2a5c]">Web </span> for designs and programs websites for dynamic user experiences. <br/>
+                    <span class="font-bold text-[#fe2a5c]">WEB3 </span> uses blockchain’s chain to build trust through decentralized, secure, and transparent systems. <br/>
+                    <span class="font-bold text-[#fe2a5c]">ML (Machine Learning) </span> lets computers learn from data to make decisions or predictions without being explicitly programmed.
                 </p>
 
 
@@ -254,7 +255,7 @@
             <div class="relative lg:w-[50%]">
 
                 <form
-                    class="flex flex-col gap-2 px-5 py-10 border border-[#fe2a5c] rounded-lg bg-black bg-opacity-80 lg:w-[85%]">
+                    class="flex flex-col gap-2 px-5 py-10 border border-[#fe2a5c] rounded-lg bg-black bg-opacity-80 lg:w-[85%]" id="connectForm">
 
                     <h1 class="text-[#6E6D6D] font-bold text-xl text-center pb-2">Get Connect</h1>
 
@@ -407,6 +408,12 @@
 
     </div>
 
+    <div class="hidden fixed z-20 top-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center" id="successMessage">
+        <div class="flex flex-col items-center justify-center gap-10 p-10 rounded-2xl bg-black">
+            <h2 class="text-xl font-bold text-white">We will connect with you soon!</h2>
+        </div>
+    </div>
+
 
     <script>
 
@@ -417,6 +424,19 @@
             navMenu.classList.toggle("hidden");
 
         }
+
+        document.getElementById("connectForm").addEventListener("submit", (e)=>{
+
+            e.preventDefault();
+
+            document.getElementById("successMessage").classList.remove("hidden");
+
+            setTimeout(()=>{
+                document.getElementById("successMessage").classList.add("hidden");
+                document.getElementById("connectForm").clear();
+            }, 3000)            
+
+        });
 
 
         function scrollToSection(id){
