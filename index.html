@@ -16,6 +16,8 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 
 </head>
 
@@ -415,6 +417,22 @@
     </div>
 
 
+    <div class="fixed bottom-4 right-6 z-10 hidden" onclick="goTop()" id="uparrow">
+        <span class="w-[40px] h-[40px] flex items-center justify-center material-symbols-outlined font-bold shadow-xl text-base text-[#6E6D6D] bg-[#731832] p-3 rounded-full cursor-pointer">
+            arrow_upward
+        </span>
+    </div>
+
+    <div class="fixed top-[150px] lg:top-[300px] flex flex-col gap-4 right-6 z-10" id="getconnect">
+        <span class="w-[40px] h-[40px] flex items-center justify-center material-symbols-outlined font-bold shadow-xl text-base text-[#6E6D6D] bg-[#731832] p-3 rounded-full cursor-pointer">
+            call
+        </span>
+        <span class="w-[40px] h-[40px] flex items-center justify-center material-symbols-outlined font-bold shadow-xl text-base text-[#6E6D6D] bg-[#731832] p-3 rounded-full cursor-pointer">
+            video_call
+        </span>
+    </div>
+   
+
     <script>
 
 
@@ -454,6 +472,32 @@
             }
             else{
                 header.classList.remove('bg-opacity-75');
+            }
+        })
+
+        function goTop(){
+            window.scrollTo(0, 0);
+        }
+
+        window.addEventListener("scroll", function(){
+            let uparrow = document.getElementById("uparrow");
+
+            if(window.scrollY > 400){
+                uparrow.classList.remove('hidden');
+            }
+            else{
+                uparrow.classList.add('hidden');
+            }
+        })
+
+        window.addEventListener("scroll", function(){
+            let uparrow = document.getElementById("getconnect");
+
+            if(window.scrollY < 250){
+                uparrow.classList.remove('hidden');
+            }
+            else{
+                uparrow.classList.add('hidden');
             }
         })
 
