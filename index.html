@@ -53,7 +53,7 @@
 
     <div class="bgset h-screen overflow-hidden" id="base">
 
-        <div class="fixed w-full bg-black bg-opacity-50 shadow-xs top-0 z-10 header">
+        <div class="fixed w-full bg-black bg-opacity-0 shadow-xs top-0 z-10 header">
 
             <div
                 class="container mx-auto max-w-screen-xl px-6 flex flex-col lg:flex-row lg:items-center justify-between py-3">
@@ -99,7 +99,7 @@
                     </div> -->
 
                     <div class="flex items-center cursor-pointer" onclick="scrollToSection('made')">
-                        <h1 class="text-white font-extrabold text-sm select-none">Made Apps</h1>
+                        <h1 class="text-white font-extrabold text-sm select-none">Programs</h1>
                     </div>
 
                     <div onclick="scrollToSection('connect')">
@@ -116,7 +116,7 @@
 
 
             <div
-                class="bg-[#fe2a5c] shadow-lg blur-xl bg-opacity-50 w-[150px] h-[150px] absolute -top-20 left-[350px] 2xl:left-[600px] rounded-full hidden lg:flex">
+                class="bg-[#fe2a5c] shadow-lg blur-xl bg-opacity-50 w-[120px] h-[120px] absolute -top-20 left-[350px] 2xl:left-[600px] rounded-full hidden lg:flex">
             </div>
 
             <div
@@ -191,11 +191,34 @@
                 </div>
 
 
-                <p class="text-white text-sm lg:max-w-lg">
-                    <span class="font-bold text-[#fe2a5c] select-none">WEB</span> for designs and programs websites for dynamic user experiences. <br/>
-                    <span class="font-bold text-[#fe2a5c] select-none">WEB3 </span> uses blockchain’s chain to build trust through decentralized, secure, and transparent systems. <br/>
-                    <span class="font-bold text-[#fe2a5c] select-none">ML (Machine Learning) </span> lets computers learn from data to make decisions or predictions without being explicitly programmed.
-                </p>
+                <div class="lg:max-w-lg flex flex-col gap-3">
+                    <div class="flex items-start gap-4">
+                        <div>
+                            <div class="w-[10px] h-[10px] mt-[6px] rounded-full bg-[#fe2a5c]"></div>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            <span class="font-bold text-[#fe2a5c] select-none">Web</span> for designs and programs websites for dynamic user experiences.
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <div>
+                            <div class="w-[10px] h-[10px] mt-[6px] rounded-full bg-[#fe2a5c]"></div>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            <span class="font-bold text-[#fe2a5c] select-none">Web3</span> uses blockchain’s chain to build trust through decentralized, secure, and transparent systems.
+                        </p>
+                    </div>
+                   
+                    <div class="flex items-start gap-4">
+                        <div>
+                            <div class="w-[10px] h-[10px] mt-[6px] rounded-full bg-[#fe2a5c]"></div>
+                        </div>
+                        <p class="text-gray-300 text-sm">
+                            <span class="font-bold text-[#fe2a5c] select-none">Machine Learning</span>  lets computers learn from data to make decisions or predictions without being explicitly programmed.
+                        </p>
+                    </div>
+                </div>
 
 
 
@@ -225,17 +248,139 @@
         </div>
     </div>
 
+    <!-- <div class="bg-black bg-opactiy-10 relative pb-0 py-10 lg:pb-20" id="made">
+
+       
+
+        <div class="container mx-auto max-w-screen-xl px-10 py-10 lg:py-10">
+
+
+            <h1 class="text-gray-200 py-10 lg:py-10 text-xl lg:text-2xl max-w-lg lg:leading-normal font-bold select-none">
+                How we write the code!
+            </h1>
+
+            <div class="flex flex-col lg:flex-row gap-10">
+
+                <div class="w-full lg:overflow-x-scroll lg:w-[35%]">
+                    <div class="flex flex-row relative w-full lg:flex-col gap-3">
+                        <div class="py-2 px-4 border-l border-l-[5px] border-[#fe2a5c]">
+                            <p class="text-gray-300 font-semibold text-base">Simple</p>
+                        </div>
+                        <div class="py-2 px-4">
+                            <p class="text-gray-300 font-semibold text-base">Fast</p>
+                        </div>
+                        <div class="py-2 px-4">
+                            <p class="text-gray-300 font-semibold text-base">Concurrent</p>
+                        </div>
+                        <div class="py-2 px-4">
+                            <p class="text-gray-300 font-semibold text-base">Self execute</p>
+                        </div>
+                    </div>
+                </div>
+               
+
+                
+               <div class="flex flex-col gap-10 lg:w-[65%]">
+                    <div class="border border-[#fe2a5c] rounded-lg p-10">
+                        <p class="text-gray-300">
+                        <span class="text-[#fe2a5c] font-semibold">def</span> home(request):
+                            <br/>
+                            <span class="ml-10 font-semibold text-green-500"># Fetch user joined groups</span>
+                            <br/>
+                            <span class="ml-10">groups = request.user.all_groups.all()</span>
+                            <br/>
+                            <span class="ml-10"> context = {
+                                "groups": groups
+                            } </span>
+                            <br/>
+                            <span class="text-yellow-400 font-semibold">return</span> render(request, "home.html", context)
+                            
+                        </p>
+                    </div>
+
+                    <div class="border border-[#fe2a5c] rounded-lg p-10">
+                        <p class="text-gray-300">
+                        <span class="text-[#fe2a5c] font-semibold">fn</span> <span class="text-yellow-400 font-semibold">main()</span>{
+                            <br/>
+                            <span class="ml-10">println!("Rust is fast!");</span>
+                            <br/>
+                        }
+                           
+                        </p>
+                    </div>
+
+                    <div class="border border-[#fe2a5c] rounded-lg p-10">
+                        <p class="text-gray-300 text-[10px]">
+                            <span class="text-[#fe2a5c] font-semibold">fn </span><span class="text-yellow-400 font-semibold">main()</span>{ 
+                                <br/>
+                                <span class="ml-10">let thread1 = thread::spawn(|| { </span>
+                            <br/>
+                            <span class="ml-20">for k in 1..11 { </span>
+                                <br/>
+                                <span class="ml-24">println!("In thread1, executing round is {}", k);</span>
+                                <br/>
+                            
+                                <span class="ml-24">    thread::sleep(Duration::from_millis(2000)); </span>
+                                <br/>
+                                <span class="ml-20">} </span> <br/>
+                                <span class="ml-10"> }); </span> <br/>
+                    
+                      
+                    
+                                <span class="ml-10">for i in 1..6 { </span>
+                            <br/>
+                            <span class="ml-20">println!("In main, executing round is {}", i); </span>
+                            <br/>
+                            <span class="ml-20">thread::sleep(Duration::from_millis(500)); </span>
+                            <br/>
+                            <span class="ml-10">} </span>
+                        <br/>
+                        <span class="ml-10">thread1.join().unwrap(); </span> 
+                        <br/>
+                    }
+                    </p>
+                    </div>
+
+                    <div class="border border-[#fe2a5c] rounded-lg p-10">
+                        <p class="text-gray-300">
+                            <span class="text-[#fe2a5c] font-semibold">function</span> <span class="text-yellow-400 font-semibold">pickWinner()</span> <span class="font-semibold text-green-500">public</span> { <br/>
+                                <span class="ml-10">require(manager == msg.sender, "You are not the manager");    </span>
+                                <br/>
+                                <span class="ml-10">require(players.length > 3, "Players are less then 3");</span>
+                                <br/>
+                                <span class="ml-10">uint r = random();    </span>
+                                <br/>
+                                <span class="ml-10">uint index = r%players.length;    </span>
+                                <br/>
+                                <span class="ml-10">winner = players[index];    </span>
+                                <br/>
+                                <span class="ml-10">winner.transfer(getBalance());    </span>
+                                <br/>
+                                <span class="ml-10">players = new address payable[](0);
+                            </span>
+                                <br/>
+                            }
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </div> -->
+
+
     <div class="bg-black bg-opactiy-10 relative pb-0 py-10 lg:pb-20" id="made">
 
         <div
-            class="bg-white absolute shadow-full right-[10px] xl:right-[10px] bottom-[150px] opacity-50 blur-2xl w-[150px] h-[100px] top-20 rounded-full hidden lg:flex">
+            class="bg-white absolute shadow-full right-[10px] xl:right-[10px] bottom-[150px] opacity-50 blur-2xl w-[100px] h-[50px] top-20 rounded-full hidden lg:flex">
         </div>
 
         <div class="container mx-auto max-w-screen-xl px-10 flex flex-col py-10 lg:py-10 items-center justify-center">
 
 
             <h1 class="text-gray-200 py-10 lg:py-20 text-xl lg:text-2xl max-w-lg lg:leading-normal font-bold select-none">
-                Made Apps
+                Programs
             </h1>
 
             <div class="flex flex-col md:flex-row gap-10  md:gap-10 lg:gap-40 items-center justify-center">
@@ -243,25 +388,25 @@
                 <div class="flex flex-col gap-5 items-center justify-center">
                     <img src="./img/chat.png" alt=""
                        class="w-[50px] h-[50px] md:w-auto md:h-auto">  
-                   <p class="text-xl font-bold text-[#6E6D6D] text-center select-none">Group Chat</p>
+                   <p class="text-lg font-semibold text-[#6E6D6D] text-center select-none">Group Chat</p>
                </div>
 
                <div class="flex flex-col gap-5 items-center justify-center">
                     <img src="./img/admission.png" alt=""
                         class="w-[50px] h-[50px] md:w-auto md:h-auto">  
-                    <p class="text-xl font-bold text-[#6E6D6D] text-center select-none">University Admission <br/> Predication</p>
+                    <p class="text-lg font-semibold text-[#6E6D6D] text-center select-none"> Admission Predication</p>
                 </div>
 
                 <div class="flex flex-col gap-5 items-center justify-center">
                     <img src="./img/supply-chain.png" alt=""
                         class="w-[50px] h-[50px] md:w-auto md:h-auto">  
-                    <p class="text-xl font-bold text-[#6E6D6D] text-center select-none">Supply Chain</p>
+                    <p class="text-lg font-semibold text-[#6E6D6D] text-center select-none">Supply Chain</p>
                 </div>
 
                 <div class="flex flex-col gap-5 items-center justify-center">
                     <img src="./img/crowdfunding.png" alt=""
                         class="w-[50px] h-[50px] md:w-auto md:h-auto">  
-                    <p class="text-xl font-bold text-[#6E6D6D] text-center select-none">Crowd Funding</p>
+                    <p class="text-lg font-semibold text-[#6E6D6D] text-center select-none">Crowd Funding</p>
                 </div>
 
             </div>
@@ -272,13 +417,16 @@
     <div class="bg-black bg-opactiy-50 relative" id="connect">
 
         <div
-            class="bg-[#fe2a5c] bg-opacity-50 w-[150px] h-[150px] absolute left-60 2xl:left-[600px] top-[200px] rounded-full blur-2xl hidden lg:flex">
+            class="bg-[#fe2a5c] bg-opacity-50 w-[150px] h-[150px] absolute left-60 2xl:left-[600px] top-[350px] rounded-full blur-2xl hidden lg:flex">
         </div>
 
         <div class="container mx-auto max-w-screen-xl px-10 flex flex-col gap-10 lg:gap-0 lg:flex-row relative py-10 lg:py-20">
 
-            <div class="flex flex-col gap-8 lg:w-[50%]">
+            <div class="flex flex-col gap-5 lg:w-[50%]">
                 <h1 class="text-gray-200 text-2xl max-w-xl lg:leading-normal font-bold select-none">Connect Today!</h1>
+
+                <p class="text-gray-300 text-sm font-semibold leading-loose">we will connect with you, <br/> let's build something awesome!</p>
+
             </div>
 
             <div class="relative lg:w-[50%] flex justify-end">
@@ -364,7 +512,7 @@
                   
 
                     <div class="flex flex-col gap-3">
-                        <p class=" text-white select-none">Your desire</p>
+                        <p class=" text-white select-none">Your desire to build</p>
                         <select name="" id=""
                             class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-white px-3" required>
                             <option value="" disabled selected>Select</option>
@@ -406,22 +554,37 @@
 
     <div class="bg-black bg-opactiy-50 relative" id="info">
 
-        <div class="container mx-auto max-w-screen-xl px-10 flex flex-col gap-4 relative pt-10 lg:pt-20 pb-10">
+        <div class="container mx-auto max-w-screen-xl px-10 flex flex-col gap-10 sm:gap-4 relative pt-10 lg:pt-20 pb-10">
 
-            <div class="flex flex-col gap-8">
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-8 items-center justify-between">
 
                 <div class="flex items-center gap-3">
                     <img src="./img/databases.png" alt="">
                     <h1 class="text-white font-extrabold text-base select-none">Blockth3</h1>
                 </div>
 
+              
+                    <div class="flex flex-row items-center gap-4">
+                        <div>
+                            <div class="w-[10px] h-[10px] rounded-full bg-[#fe2a5c]"></div>
+                        </div>
+                        <p class="text-gray-300 text-sm font-semibold">We build</p>
+                    </div>
 
-                <!-- <h1 class="text-gray-200 text-4xl max-w-xl lg:leading-normal font-bold">Connect Today!
-                </h1> -->
-
-                <!-- <p class="text-gray-200">Tech Stacks:</p> -->
-
-
+                    <div class="flex flex-row items-center gap-4">
+                       <div>
+                            <div class="w-[10px] h-[10px] rounded-full bg-[#fe2a5c]"></div>
+                        </div>
+                        <p class="text-gray-300 text-sm font-semibold">Connect</p>
+                    </div>
+             
+                    <div class="flex flex-row items-center gap-4">
+                       <div>
+                            <div class="w-[10px] h-[10px] rounded-full bg-[#fe2a5c]"></div>
+                        </div>
+                        <p class="text-gray-300 text-sm font-semibold">Meet Us</p>
+                    </div>
+                
             </div>
 
             <div class="relative flex flex-col items-center">
@@ -495,10 +658,10 @@
             let header = document.querySelector(".header");
 
             if(window.scrollY > 72){
-                header.classList.add('bg-opacity-75');
+                header.classList.add('bg-opacity-80');
             }
             else{
-                header.classList.remove('bg-opacity-75');
+                header.classList.remove('bg-opacity-80');
             }
         })
 
