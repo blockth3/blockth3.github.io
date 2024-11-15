@@ -480,13 +480,13 @@
                     <div class="flex flex-col gap-3">
                         <p class=" text-gray-200 select-none">Name of Yours</p>
                         <input type="text"
-                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-gray-200 px-3" required>
+                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-gray-200 px-3" id="name" required>
                     </div>
 
                     <div class="flex flex-col gap-3">
                         <p class=" text-gray-200 select-none">Email</p>
                         <input type="text"
-                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-gray-200 px-3" required>
+                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-gray-200 px-3" id="email" required>
                     </div>
 
 
@@ -494,7 +494,7 @@
                     <div class="flex flex-col gap-3 w-full">
                         <p class=" text-gray-200 select-none">Phone</p>
                         <div class="flex flex-row gap-3 w-full">
-                            <select id="country-codes"
+                            <select id="country"
                                 class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-gray-200 px-3 select-none"
                                 name="country-codes">
                                 <option value="+91" selected>+91</option>
@@ -546,7 +546,7 @@
                                 <option value="+234">+234</option>
                             </select>
 
-                            <input type="number"
+                            <input type="phone" id="phone"
                                 class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-gray-200 px-3 w-full"
                                 required>
 
@@ -557,13 +557,13 @@
 
                     <div class="flex flex-col gap-3">
                         <p class=" text-gray-200 select-none">Your desire to build</p>
-                        <select name="" id=""
+                        <select name="" id="build"
                             class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-gray-200 px-3" required>
                             <option value="" disabled selected>Select</option>
-                            <option value="">Web</option>
-                            <option value="">Blockchain (Web3)</option>
-                            <option value="">ML</option>
-                            <option value="">Others</option>
+                            <option value="web">Web</option>
+                            <option value="blockchain">Blockchain (Web3)</option>
+                            <option value="ml">ML</option>
+                            <option value="others">Others</option>
                         </select>
                     </div>
 
@@ -648,7 +648,7 @@
     <div class="hidden fixed z-20 top-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center"
         id="successMessage">
         <div class="flex flex-col items-center justify-center gap-10 p-10 rounded-2xl bg-opacity-80 bg-black">
-            <h2 class="font-bold text-gray-200 text-center text-sm select-none">We will connect with you soon!</h2>
+            <h2 class="font-bold text-gray-200 text-center text-sm select-none">Connecting with your email account!</h2>
         </div>
     </div>
 
@@ -687,7 +687,7 @@
                     <h3 class="text-[#fe2a5c] text-lg font-semibold">Connect Our Team</h3>
                 </div>
                 <div class="flex flex-col gap-2">
-                    <p class="text-gray-300 text-base">support@blockth3.com, 9344798048</p>
+                    <p class="text-gray-300 text-base">blockth3.io@gmail.com, 9344798048</p>
                     <!-- <p class="text-gray-300 text-base">We are few of them have being building this as a startup</p>
                     <p class="text-gray-300 text-base">We have been using reference and get resourse from
                         <span class="text-[#fe2a5c] font-semibold">Github</span>, <span class="text-[#fe2a5c] font-semibold">Medium</span>, <span class="text-[#fe2a5c] font-semibold">DEV.io</span>, <span class="text-[#fe2a5c] font-semibold">Stackoverflow</span></p> -->
@@ -760,10 +760,37 @@
 
             document.getElementById("successMessage").classList.remove("hidden");
 
+            
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let country_code = document.getElementById("country").value;
+            let phone = document.getElementById("phone").value;
+            let build = document.getElementById("build").value;
+
+            console.log("name", name, "email", email, "country_code", country_code, "phone", phone, "build", build);
+  
+            let subject = `Connect request from ${name}, to build ${build} apps.`;
+
+            let body = `
+            Requested on: ${new Date()},
+            Email to Connect: ${email},
+            Phone Number: ${country_code} ${phone},
+            We desire to Build: ${build} apps
+            `;
+
+            let orgemail = "blockth3.io@gmail.com";
+
+            const mailtoLink = `mailto:${orgemail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // Open the email client
+            window.location.href = mailtoLink;
+
             setTimeout(() => {
                 document.getElementById("successMessage").classList.add("hidden");
                 document.getElementById("connectForm").clear();
             }, 3000)
+
+
 
         });
 
