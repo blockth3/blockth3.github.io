@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <meta name="robots" content="index, follow">
+
     <title>Blockth3 - We build your desire</title>
     <meta name="description" content="Blockth3 - Build & Deploy Web, Web3, ML, Data Science, Machine Learning, Blockchain Platform">
 
@@ -42,35 +44,11 @@
 
     <link rel="canonical" href="https://blockth3.in/">
 
+    <link rel="stylesheet" href="./index.css">
+
 </head>
 
 <body>
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            overflow-x: hidden;
-            overflow-y: scroll;
-        }
-
-        * {
-            font-family: "Space Mono", monospace;
-        }
-
-        .bgset {
-            background: radial-gradient(ellipse at center, #e6007a 0%, #000 70%);
-            background-repeat: no-repeat;
-        }
-
-        #try3D {
-            transform: rotateY(200deg);
-        }
-    </style>
-
-
 
     <div class="bgset overflow-hidden" id="base">
 
@@ -260,28 +238,6 @@
 
     </div>
 
-
-    <!-- <div class="bg-black bg-opactiy-50 relative">
-        <div class="container mx-auto max-w-screen-lg 2xl:max-w-screen-xl px-10 flex relative pt-10 pb-5">
-            <div class="flex flex-row gap-10 items-center justify-center w-full">
-                <div>
-                    <img src="./img/github.png" class="w-[30px] h-[30px]" alt="github">
-                </div>
-                <div>
-                    <img src="./img/medium.png" class="w-[30px] h-[30px]" alt="medium">
-                </div>
-                <div>
-                    <img src="./img/stack-overflow.png" class="w-[30px] h-[30px]" alt="stack overflow">
-                </div>
-                <div>
-                    <img src="./img/devio.png" class="w-[30px] h-[30px]" alt="dev.io">
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
-
     <div class="bg-black bg-opactiy-50 relative" id="explore">
 
         <div
@@ -297,8 +253,7 @@
                     Developement
                 </h2>
 
-                <!-- <p class="text-gray-200">Tech Stacks:</p> -->
-
+                
                 <div class="flex flex-row items-center gap-4">
                     <div class="border-[0.1px] border-gray-400 bg-gray-800 bg-opacity-20 shadow-lg p-2 rounded-lg">
                         <img src="./img/icon/rust.png" alt="rust" class="w-[20px] h-[20px]" />
@@ -347,7 +302,7 @@
 
             <div class="relative lg:w-[50%]">
 
-                <!-- <p class="text-gray-200">Tech Stacks:</p> -->
+               
 
 
                 <div class="absolute right-0 bottom-0 p-10 rounded-full shadow-lg border border-[#6e6d6d] border-[5px] hidden lg:flex"
@@ -466,20 +421,20 @@
 
                     <div class="border border-[#fe2a5c] rounded-lg p-10 hidden code" id="code4">
                         <p class="text-gray-200 text-[12px] w-full overflow-auto">
-                            <span class="text-[#fe2a5c] font-semibold">function</span> <span class="text-yellow-400 font-semibold">pickWinner()</span> <span class="font-semibold text-green-500">public</span> { <br/>
-                                <span class="ml-10">require(manager == msg.sender, "You are not the manager");    </span>
+                            <span class="text-[#fe2a5c] font-semibold text-nowrap">function</span> <span class="text-yellow-400 font-semibold">pickWinner()</span> <span class="font-semibold text-green-500">public</span> { <br/>
+                                <span class="ml-10 text-nowrap">require(manager == msg.sender, "You are not the manager");    </span>
                                 <br/>
-                                <span class="ml-10">require(players.length > 3, "Players are less then 3");</span>
+                                <span class="ml-10 text-nowrap">require(players.length > 3, "Players are less then 3");</span>
                                 <br/>
-                                <span class="ml-10">uint r = random();    </span>
+                                <span class="ml-10 text-nowrap">uint r = random();    </span>
                                 <br/>
-                                <span class="ml-10">uint index = r%players.length;    </span>
+                                <span class="ml-10 text-nowrap">uint index = r%players.length;    </span>
                                 <br/>
-                                <span class="ml-10">winner = players[index];    </span>
+                                <span class="ml-10 text-nowrap">winner = players[index];    </span>
                                 <br/>
-                                <span class="ml-10">winner.transfer(getBalance());    </span>
+                                <span class="ml-10 text-nowrap">winner.transfer(getBalance());    </span>
                                 <br/>
-                                <span class="ml-10">players = new address payable[](0);
+                                <span class="ml-10 text-nowrap">players = new address payable[](0);
                             </span>
                                 <br/>
                             }
@@ -537,9 +492,7 @@
 
     <div class="bg-black bg-opactiy-50 relative" id="connect">
 
-        <!-- <div
-            class="bg-[#fe2a5c] bg-opacity-50 w-[150px] h-[150px] absolute left-60 2xl:left-[600px] top-[250px] rounded-full blur-2xl hidden lg:flex">
-        </div> -->
+    
 
         <div
             class="container mx-auto max-w-screen-lg 2xl:max-w-screen-xl px-10 flex flex-col gap-10 lg:gap-0 lg:flex-row relative py-10 lg:py-20">
@@ -561,126 +514,6 @@
                         Connect</a>
                     </div>
                 </div>
-        
-
-                <!-- <form
-                    class="flex flex-col gap-2 px-5 py-10 border border-[#fe2a5c] rounded-lg bg-black bg-opacity-80 w-full lg:w-[85%]"
-                    id="connectForm">
-
-                    <h2 class="text-[#6E6D6D] font-bold text-xl text-center pb-2 select-none">Get Connect</h2>
-
-                    <div class="flex flex-col gap-3">
-                        <p class=" text-gray-200 select-none">Name of Yours</p>
-                        <input type="text"
-                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-gray-200 px-3" id="name"
-                            required>
-                    </div>
-
-                    <div class="flex flex-col gap-3">
-                        <p class=" text-gray-200 select-none">Email</p>
-                        <input type="text"
-                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-gray-200 px-3" id="email"
-                            required>
-                    </div>
-
-
-
-                    <div class="flex flex-col gap-3 w-full">
-                        <p class=" text-gray-200 select-none">Phone</p>
-                        <div class="flex flex-row gap-3 w-full">
-                            <select id="country"
-                                class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-gray-200 px-3 select-none"
-                                name="country-codes">
-                                <option value="+91" selected>+91</option>
-                                <option value="+1">+1</option>
-                                <option value="+44">+44</option>
-                                <option value="+61">+61</option>
-                                <option value="+49">+49</option>
-                                <option value="+33">+33</option>
-                                <option value="+81">+81</option>
-                                <option value="+86">+86</option>
-                                <option value="+7">+7</option>
-                                <option value="+55">+55</option>
-                                <option value="+27">+27</option>
-                                <option value="+39">+39</option>
-                                <option value="+34">+34</option>
-                                <option value="+41">+41</option>
-                                <option value="+46">+46</option>
-                                <option value="+31">+31</option>
-                                <option value="+47">+47</option>
-                                <option value="+45">+45</option>
-                                <option value="+353">+353</option>
-                                <option value="+66">+66</option>
-                                <option value="+63">+63</option>
-                                <option value="+60">+60</option>
-                                <option value="+65">+65</option>
-                                <option value="+52">+52</option>
-                                <option value="+54">+54</option>
-                                <option value="+57">+57</option>
-                                <option value="+64">+64</option>
-                                <option value="+358">+358</option>
-                                <option value="+32">+32</option>
-                                <option value="+30">+30</option>
-                                <option value="+48">+48</option>
-                                <option value="+420">+420</option>
-                                <option value="+372">+372</option>
-                                <option value="+371">+371</option>
-                                <option value="+370">+370</option>
-                                <option value="+961">+961</option>
-                                <option value="+20">+20</option>
-                                <option value="+972">+972</option>
-                                <option value="+965">+965</option>
-                                <option value="+974">+974</option>
-                                <option value="+971">+971</option>
-                                <option value="+62">+62</option>
-                                <option value="+58">+58</option>
-                                <option value="+256">+256</option>
-                                <option value="+251">+251</option>
-                                <option value="+243">+243</option>
-                                <option value="+234">+234</option>
-                            </select>
-
-                            <input type="phone" id="phone"
-                                class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-gray-200 px-3 w-full"
-                                required>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="flex flex-col gap-3">
-                        <p class=" text-gray-200 select-none">Your desire to build</p>
-                        <select name="" id="build"
-                            class="bg-inherit border-[0.5px] py-2 rounded-lg outline-none text-gray-200 px-3" required>
-                            <option value="" disabled selected>Select</option>
-                            <option value="web">Web</option>
-                            <option value="blockchain">Blockchain (Web3)</option>
-                            <option value="ml">ML</option>
-                            <option value="others">Others</option>
-                        </select>
-                    </div>
-
-
-                    <div class="pt-5">
-                        <div>
-                            <button
-                                class="bg-[#fd356e] text-gray-200 px-2 py-2 rounded-lg text-sm font-semibold select-none">Connect</button>
-                        </div>
-                    </div>
-
-                </form> -->
-
-                <!-- <p class="text-gray-200">Tech Stacks:</p> -->
-                <!-- <div class="absolute right-0 bottom-0 p-10 rounded-full shadow-lg border border-gray-600 border-[5px]"
-                    id="try3D">
-                    <img src="./img/icon/python.png" class="w-[100px] h-[100px]" />
-                </div>
-
-                <div class="absolute left-10 top-4 p-10 rounded-full shadow-lg border border-gray-600 border-[5px]">
-                <img src="./img/icon/blockchain.png" class="w-[100px] h-[100px]" /> -->
-
-
 
             </div>
 
@@ -859,139 +692,7 @@
         </span>
     </div> -->
 
-
-    <script>
-
-        function openTab(id) {
-            let popUp = document.getElementById('popUp');
-            popUp.classList.remove("hidden");
-
-
-            let contents = document.querySelectorAll('.content');
-            for (let i = 0; i < contents.length; i++) {
-                contents[i].classList.add("hidden");
-            }
-
-            document.getElementById(`${id}`).classList.remove("hidden");
-        }
-
-        function closepopUp() {
-            let popUp = document.getElementById('popUp');
-            popUp.classList.add("hidden");
-        }
-
-        function navToggle() {
-
-            let navMenu = document.querySelector(".navMenu");
-            navMenu.classList.toggle("hidden");
-
-        }
-
-        function changeCodeTab(id){
-            let codes = document.querySelectorAll(".code");
-            let number = id.slice(id.length-1, id.length);
-            console.log(number, "id.length::");
-
-            let codeheads = document.querySelectorAll(".codehead");
-            for(let i=0; i<codeheads.length; i++){
-                codeheads[i].classList.remove("border-l", "border-l-[5px]", "border-[#fe2a5c]");
-            }
-
-            codeheads[parseInt(number)-1].classList.add("border-l", "border-l-[5px]", "border-[#fe2a5c]");
-
-            for(let i=0; i<codes.length; i++){
-                codes[i].classList.add("hidden");
-            }
-            document.getElementById(id).classList.remove("hidden");
-        }
-
-        //document.getElementById("connectForm").addEventListener("submit", (e) => {
-//
-        //    e.preventDefault();
-//
-        //    document.getElementById("successMessage").classList.remove("hidden");
-//
-//
-        //    let name = document.getElementById("name").value;
-        //    let email = document.getElementById("email").value;
-        //    let country_code = document.getElementById("country").value;
-        //    let phone = document.getElementById("phone").value;
-        //    let build = document.getElementById("build").value;
-//
-        //    console.log("name", name, "email", email, "country_code", country_code, "phone", phone, "build", build);
-//
-        //    let subject = `Connect request from ${name} & email ${email} & contact number ${phone} , to build ${build} apps.`;
-//
-        //    // let body = `
-        //    // Requested on: ${new Date()},
-        //    // Email to Connect: ${email},
-        //    // Phone Number: ${country_code} ${phone},
-        //    // We desire to Build: ${build} apps
-        //    // `;
-//
-        //    let orgemail = "blockth3.io@gmail.com";
-//
-        //    const mailtoLink = `mailto:${orgemail}?subject=${encodeURIComponent(subject)}`;
-//
-        //    // Open the email client
-        //    window.location.href = mailtoLink;
-//
-        //    setTimeout(() => {
-        //        document.getElementById("successMessage").classList.add("hidden");
-        //        document.getElementById("connectForm").clear();
-        //    }, 3000)
-//
-//
-//
-        //});
-//
-//
-        function scrollToSection(id) {
-            let value = document.getElementById(id).offsetTop - 72;
-            window.scrollTo(0, value);
-            let navMenu = document.querySelector(".navMenu");
-            navMenu.classList.add("hidden");
-        }
-
-        window.addEventListener("scroll", function () {
-            let header = document.querySelector(".header");
-
-            if (window.scrollY > 72) {
-                header.classList.add('lg:bg-opacity-80');
-            }
-            else {
-                header.classList.remove('lg:bg-opacity-80');
-            }
-        })
-
-        function goTop() {
-            window.scrollTo(0, 0);
-        }
-
-        window.addEventListener("scroll", function () {
-            let uparrow = document.getElementById("uparrow");
-
-            if (window.scrollY > 400) {
-                uparrow.classList.remove('hidden');
-            }
-            else {
-                uparrow.classList.add('hidden');
-            }
-        })
-
-        window.addEventListener("scroll", function () {
-            let uparrow = document.getElementById("getconnect");
-
-            if (window.scrollY < 250) {
-                uparrow.classList.remove('hidden');
-            }
-            else {
-                uparrow.classList.add('hidden');
-            }
-        })
-
-    </script>
-
+    <script src="./script.js"></script>
 
 </body>
 
