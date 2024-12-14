@@ -1,3 +1,28 @@
+
+
+
+// let headerimg = document.getElementById("headerimg");
+// console.log(headerimg, "headerimg:::");
+
+
+setTimeout(()=>{
+    
+    let hostname = window.location.origin;
+    let headerimg = document.getElementById("headerimg");
+    headerimg.src = hostname + "/img/blockth3.jpeg";
+
+    let mediumimg = document.getElementById("mediumimg");
+    mediumimg.src = hostname + "/img/medium.png";
+
+    let linkedinimg = document.getElementById("linkedinimg");
+    linkedinimg.src = hostname + "/img/linkedin.png";
+
+    let footerimg = document.getElementById("footerimg");
+    footerimg.src = hostname + "/img/blockth3.jpeg";
+
+}, 500)
+
+
 function openTab(id) {
     let popUp = document.getElementById('popUp');
     popUp.classList.remove("hidden");
