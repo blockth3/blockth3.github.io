@@ -1,11 +1,3 @@
-
-
-
-// let headerimg = document.getElementById("headerimg");
-// console.log(headerimg, "headerimg:::");
-
-
-
 setTimeout(()=>{
     
     let hostname = window.location.origin;
@@ -21,7 +13,7 @@ setTimeout(()=>{
     let footerimg = document.getElementById("footerimg");
     footerimg.src = hostname + "/img/blockth3.jpeg";
 
-}, 500)
+}, 200)
 
 
 function openTab(id) {
