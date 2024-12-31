@@ -1,65 +1,56 @@
 
 
-        <div class="fixed w-full bg-black bg-opacity-80 lg:bg-opacity-0 shadow-xs top-0 z-10 header">
+<div class="fixed w-full bg-black bg-opacity-80 lg:bg-opacity-0 shadow-xs top-0 z-10 header">
 
-            <div
-                class="container mx-auto max-w-screen-lg 2xl:max-w-screen-xl px-6 flex flex-col lg:flex-row lg:items-center justify-between py-3">
+    <div
+        class="container mx-auto max-w-screen-lg 2xl:max-w-screen-xl px-6 flex flex-col lg:flex-row lg:items-center justify-between py-3">
 
-                <div class="flex flex-row items-center justify-between">
-                    <div class="flex items-center gap-3 relative">
-                        <img src="./img/blockth3.jpeg" width="50" height="50" alt="blockth3 logo" id="headerimg">
-                        <h2 class="text-gray-200 font-extrabold text-base select-none">Blockth3</h2>
-                        <!-- <div class="absolute w-[10px] h-[10px] rounded-full bg-[#ca2b58] -right-2 top-1"></div> -->
+        <div class="flex flex-row items-center justify-between">
+            <a href="/" class="flex items-center gap-3 relative">
+                <img src="../img/blockth3.jpeg" width="50" height="50" alt="blockth3 logo">
+                <h2 class="text-gray-200 font-extrabold text-base select-none">Blockth3</h2>
+            </a>
+            <div>
+                <div class="flex flex-col gap-2 lg:hidden cursor-pointer" onclick="navToggle()">
+                    <div class="w-[30px] rounded-lg h-[2px] bg-[#fe2a5c]">
                     </div>
-                    <div>
-                        <div class="flex flex-col gap-2 lg:hidden cursor-pointer" onclick="navToggle()">
-                            <div class="w-[30px] rounded-lg h-[2px] bg-[#fe2a5c]">
-                            </div>
-                            <div class="w-[30px] rounded-lg h-[2px] bg-[#fe2a5c]">
-                            </div>
-                            <div class="w-[30px] rounded-lg h-[2px] bg-[#fe2a5c]">
-                            </div>
-                        </div>
-
-                        <!-- <div>
-                            <div class="w-[30px] text-[30px] font-bold h-[30px] text-[#fe2a5c]">
-                                X
-                            </div>
-                        </div> -->
-
+                    <div class="w-[30px] rounded-lg h-[2px] bg-[#fe2a5c]">
                     </div>
-                </div>
-
-
-                <div
-                    class="navMenu hidden lg:flex py-5 lg:py-0 flex lg:flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
-
-                    <!-- <div class="flex items-center cursor-pointer" onclick="scrollToSection('base')">
-                        <h2 class="text-gray-200 font-extrabold text-sm select-none">Base</h2>
-                    </div> -->
-
-                    <div class="flex items-center cursor-pointer" onclick="scrollToSection('explore')">
-                        <p class="text-gray-200 font-extrabold text-sm select-none">Explore</p>
-                    </div>
-
-                    <!-- <div class="flex items-center cursor-pointer" onclick="scrollToSection('info')">
-                        <p class="text-gray-200 font-extrabold text-sm">Info Us</p>
-                    </div> -->
-
-                    <div class="flex items-center cursor-pointer" onclick="scrollToSection('made')">
-                        <p class="text-gray-200 font-extrabold text-sm select-none">Programs</p>
-                    </div>
-
-                    <!-- onclick="scrollToSection('connect')" -->
-                    <div>
-                        <a href="mailto:blockth3io@gmail.com"
-                            class="bg-[#fd356e] text-gray-200 px-2 py-2 rounded-full text-sm font-semibold select-none">Get
-                            Connect</a>
+                    <div class="w-[30px] rounded-lg h-[2px] bg-[#fe2a5c]">
                     </div>
                 </div>
 
             </div>
-
         </div>
+
+
+        <div
+            class="navMenu hidden lg:flex py-5 lg:py-0 flex lg:flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
+
+            
+
+            <div class="flex items-center cursor-pointer" onclick="scrollToSection('explore')">
+                <p class="text-gray-200 font-extrabold text-sm select-none">Explore</p>
+            </div>
+
+
+            <div class="flex items-center cursor-pointer" onclick="scrollToSection('made')">
+                <p class="text-gray-200 font-extrabold text-sm select-none">Programs</p>
+            </div>
+
+            <a href="../written.html" class="flex items-center cursor-pointer">
+                <p class="text-gray-200 font-extrabold text-sm select-none">Threads</p>
+            </a>
+
+            <div>
+                <a href="mailto:blockth3io@gmail.com"
+                    class="bg-[#fd356e] text-gray-200 px-2 py-2 rounded-full text-sm font-semibold select-none">Get
+                    Connect</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
 
       

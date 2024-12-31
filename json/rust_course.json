@@ -1,0 +1,116 @@
+
+[
+  {
+    "title": "Rust Programming for Beginners",
+    "description": "A comprehensive introduction to Rust programming language for absolute beginners. It covers the basics of Rust, its syntax, and basic concepts with hands-on examples.",
+    "lessons": [
+      {
+        "lesson": 1,
+        "title": "Introduction to Rust",
+        "description": "Learn about Rust, why it’s popular, and its key features.",
+        "content": {
+          "overview": "Rust is a systems programming language that emphasizes safety, speed, and concurrency. It's widely used for developing high-performance applications.",
+          "basic_syntax": "Rust has a simple syntax that’s easy to understand, and it compiles to fast machine code."
+        }
+      },
+      {
+        "lesson": 2,
+        "title": "Setting Up Rust Environment",
+        "description": "Learn how to install Rust and set up your development environment.",
+        "content": {
+          "steps": [
+            "Install Rust using rustup by running 'curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh' on your terminal.",
+            "Verify the installation by typing 'rustc --version' to check the Rust version."
+          ]
+        }
+      },
+      {
+        "lesson": 3,
+        "title": "Hello, World! in Rust",
+        "description": "Your first Rust program to display 'Hello, World!' on the screen.",
+        "code": {
+          "example": "fn main() {\n    println!(\"Hello, World!\");\n}"
+        }
+      },
+      {
+        "lesson": 4,
+        "title": "Variables and Data Types",
+        "description": "Understand variables and different data types in Rust.",
+        "content": {
+          "variables": "In Rust, variables are immutable by default. Use 'let' for declaring variables.",
+          "data_types": [
+            "Integers: i32, u32, etc.",
+            "Floating-point numbers: f32, f64",
+            "Boolean: bool",
+            "Character: char",
+            "Tuples and Arrays"
+          ]
+        },
+        "code": {
+          "example": "fn main() {\n    let x: i32 = 5;\n    let y: f64 = 3.14;\n    let is_active: bool = true;\n    let char_value: char = 'A';\n    println!(\"x: {}, y: {}, is_active: {}, char_value: {}\", x, y, is_active, char_value);\n}"
+        }
+      },
+      {
+        "lesson": 5,
+        "title": "Control Flow: if, else, and loops",
+        "description": "Learn how to use if/else statements and loops (for, while) in Rust.",
+        "content": {
+          "if_else": "Rust supports if and else conditions for branching logic.",
+          "loops": "Rust provides 'loop', 'while', and 'for' loops for iteration."
+        },
+        "code": {
+          "example": "fn main() {\n    let number = 10;\n    if number > 5 {\n        println!(\"Number is greater than 5\");\n    } else {\n        println!(\"Number is less than or equal to 5\");\n    }\n\n    for i in 1..5 {\n        println!(\"Loop iteration: {}\", i);\n    }\n}"
+        }
+      },
+      {
+        "lesson": 6,
+        "title": "Functions in Rust",
+        "description": "Learn how to define and use functions in Rust.",
+        "content": {
+          "function_definition": "Functions in Rust are declared using the 'fn' keyword.",
+          "return_values": "Functions can return values or be void (no return value)."
+        },
+        "code": {
+          "example": "fn greet(name: &str) {\n    println!(\"Hello, {}!\", name);\n}\n\nfn add(a: i32, b: i32) -> i32 {\n    a + b\n}\n\nfn main() {\n    greet(\"Alice\");\n    let sum = add(5, 7);\n    println!(\"The sum is: {}\", sum);\n}"
+        }
+      },
+      {
+        "lesson": 7,
+        "title": "Ownership and Borrowing",
+        "description": "Learn about Rust's ownership system, a key feature that prevents data races and ensures memory safety.",
+        "content": {
+          "ownership": "In Rust, each value has a variable that owns it, and there can only be one owner at a time.",
+          "borrowing": "Rust allows borrowing values via references without taking ownership of the value."
+        },
+        "code": {
+          "example": "fn main() {\n    let s1 = String::from(\"Hello\");\n    let s2 = &s1;  // Borrowing\n    println!(\"s1: {}, s2: {}\", s1, s2);\n}"
+        }
+      },
+      {
+        "lesson": 8,
+        "title": "Structs and Enums",
+        "description": "Learn how to define and use structs and enums in Rust.",
+        "content": {
+          "structs": "A struct is a custom data type that lets you group related data together.",
+          "enums": "An enum is a type that can have multiple variants, allowing for flexible data representations."
+        },
+        "code": {
+          "example": "struct Person {\n    name: String,\n    age: u32,\n}\n\nfn main() {\n    let person = Person { name: String::from(\"Alice\"), age: 30 };\n    println!(\"{} is {} years old\", person.name, person.age);\n}"
+        }
+      },
+      {
+        "lesson": 9,
+        "title": "Error Handling in Rust",
+        "description": "Learn how Rust handles errors using 'Result' and 'Option' types.",
+        "content": {
+          "result_type": "The 'Result' type is used for functions that can return an error.",
+          "option_type": "The 'Option' type is used when there may or may not be a value."
+        },
+        "code": {
+          "example": "fn divide(a: f64, b: f64) -> Result<f64, String> {\n    if b == 0.0 {\n        Err(String::from(\"Cannot divide by zero\"))\n    } else {\n        Ok(a / b)\n    }\n}\n\nfn main() {\n    match divide(10.0, 2.0) {\n        Ok(result) => println!(\"Result: {}\", result),\n        Err(e) => println!(\"Error: {}\", e),\n    }\n}"
+        }
+      }
+    ],
+    "conclusion": "This course covers the basic concepts of Rust, including syntax, variables, control flow, functions, ownership, structs, enums, and error handling. Continue practicing by building small projects and exploring the Rust documentation for more advanced topics."
+  }
+]
